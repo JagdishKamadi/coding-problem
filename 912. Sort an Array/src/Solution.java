@@ -9,15 +9,13 @@ class Solution {
             int mid = start + (end - start) / 2;
             mergeSort(nums, start, mid);
             mergeSort(nums, mid + 1, end);
-            merge(nums, start, mid, end);
+            sort(nums, start, mid, end);
         }
     }
 
-    private void merge(int[] nums, int start, int mid, int end) {
-        // Find sizes of two subarrays to be merged
+    private void sort(int[] nums, int start, int mid, int end) {
         int n1 = mid - start + 1;
         int n2 = end - mid;
-        // Create temp arrays
         int[] left = new int[n1];
         int[] right = new int[n2];
 
@@ -25,13 +23,12 @@ class Solution {
             left[i] = nums[start + i];
         }
 
-        for (int j = 0; j < n2; j++) {
-            right[j] = nums[mid + 1 + j];
+        for (int i = 0; i < n2; i++) {
+            right[i] = nums[mid + 1 + i];
         }
-
         int i = 0;
         int j = 0;
-        int k = start; // we must start from left size starting of index
+        int k = start;
 
         while (i < n1 && j < n2) {
             if (left[i] <= right[j]) {
