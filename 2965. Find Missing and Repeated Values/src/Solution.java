@@ -12,9 +12,9 @@ class Solution {
         int n = grid[0].length;
         int[] freq = new int[m * n + 1];
 
-        for (int i = 0; i < m; i++) {
+        for (int[] ints : grid) {
             for (int j = 0; j < n; j++) {
-                freq[grid[i][j]]++;
+                freq[ints[j]]++;
             }
         }
         int repeat = -1;
