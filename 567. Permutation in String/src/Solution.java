@@ -12,7 +12,6 @@ class Solution {
         Map<Character, Integer> s1Map = new HashMap<>();
         Map<Character, Integer> s2Map = new HashMap<>();
         int i = 0;
-        int left = 0;
         for (; i < s1Length; i++) {
             s1Map.put(s1.charAt(i), s1Map.getOrDefault(s1.charAt(i), 0) + 1);
             s2Map.put(s2.charAt(i), s2Map.getOrDefault(s2.charAt(i), 0) + 1);
@@ -20,6 +19,7 @@ class Solution {
         if (s1Map.equals(s2Map)) {
             return true;
         }
+        int left = 0;
         for (; i < s2Length; i++) {
             char rightChar = s2.charAt(i);
             s2Map.put(rightChar, s2Map.getOrDefault(rightChar, 0) + 1);
