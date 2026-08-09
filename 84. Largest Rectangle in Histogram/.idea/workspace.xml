@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="763cb784-78c4-48cc-a99a-abff72ef589c" name="Changes" comment="Added the solution for 84. Largest Rectangle in Histogram coding problem.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution2.java" afterDir="false" />
-    </list>
+    <list default="true" id="763cb784-78c4-48cc-a99a-abff72ef589c" name="Changes" comment="Added the solution for 84. Largest Rectangle in Histogram coding problem." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775270557567</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added the solution for 84. Largest Rectangle in Histogram coding problem.">
+      <option name="closed" value="true" />
+      <created>1786278350706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786278350706</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
