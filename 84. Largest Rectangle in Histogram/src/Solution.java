@@ -11,7 +11,8 @@ class Solution {
             while (right < n && heights[right] >= heights[i]) {
                 right++;
             }
-            maxArea = Math.max(maxArea, (right - left - 1) * heights[i]);
+            int area = (right - left - 1) * heights[i];
+            maxArea = Math.max(maxArea, area);
         }
         return maxArea;
     }
