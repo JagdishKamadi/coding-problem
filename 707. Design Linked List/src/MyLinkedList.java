@@ -1,51 +1,42 @@
-
 class MyLinkedList {
-
-    private Node head;
+    Node head;
 
     public MyLinkedList() {
-        head = new Node(-1); // Dummy head
+        head = new Node(-1);
     }
 
     public int get(int index) {
-        if (index < 0 || index >= getLen()) {
+        int len = getLen();
+        if (index < 0 || index >= len) {
             return -1;
         }
-
         Node temp = head.next;
-
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-
         return temp.val;
     }
 
     public void addAtHead(int val) {
-        Node newNode = new Node(val);
-        newNode.next = head.next;
-        head.next = newNode;
+        Node firstNode = new Node(val);
+        firstNode.next = head.next;
+        head.next = firstNode;
     }
 
     public void addAtTail(int val) {
         Node temp = head;
-
         while (temp.next != null) {
             temp = temp.next;
         }
-
         temp.next = new Node(val);
     }
 
     public void addAtIndex(int index, int val) {
         int len = getLen();
-
         if (index < 0 || index > len) {
             return;
         }
-
         Node temp = head;
-
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
@@ -57,37 +48,31 @@ class MyLinkedList {
 
     public void deleteAtIndex(int index) {
         int len = getLen();
-
         if (index < 0 || index >= len) {
             return;
         }
-
         Node temp = head;
-
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-
         temp.next = temp.next.next;
     }
 
     private int getLen() {
-        int count = 0;
         Node temp = head.next;
-
+        int len = 0;
         while (temp != null) {
-            count++;
             temp = temp.next;
+            len++;
         }
-
-        return count;
+        return len;
     }
 
     private class Node {
         private Node next;
-        private int val;
+        private Integer val;
 
-        public Node(int val) {
+        public Node(Integer val) {
             this.val = val;
         }
     }
